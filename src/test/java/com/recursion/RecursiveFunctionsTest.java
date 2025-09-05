@@ -1,15 +1,14 @@
-package com.template;
+package com.recursion;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.template.RecursiveFunctions.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static com.recursion.RecursiveFunctions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-class AppTest {
+class RecursiveFunctionsTest {
 
     @Test
     public void testRecursiveIndexOf() {
@@ -137,9 +136,9 @@ class AppTest {
         assertTrue(recursivePalindrome("civic"));
         assertTrue(recursivePalindrome("deified"));
 
-        assertTrue(recursivePalindrome("hello"));
-        assertTrue(recursivePalindrome("world"));
-        assertTrue(recursivePalindrome("java"));
-        assertTrue(recursivePalindrome("programming"));
+        assertFalse(recursivePalindrome("hello"));
+        assertFalse(recursivePalindrome("world"));
+        assertFalse(recursivePalindrome("java"));
+        assertFalse(recursivePalindrome("programming"));
     }
 }
